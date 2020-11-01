@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+
+    ports:
+      - "8000:8000"
+      - "3000:3000"
+
+    volumes:
+      - .:/site/
+
+    stdin_open: true
