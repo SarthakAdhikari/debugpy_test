@@ -4,9 +4,9 @@ WORKDIR /site/
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
-RUN apt update
-RUN DEBIAN_FRONTEND='noninteractive' apt install -y nmap
+RUN apk update && apk add nmap
 
 COPY . .
+EXPOSE 3000
 
 CMD [ "python", "./test.py" ]
