@@ -1,0 +1,12 @@
+* README
+
+1) Open the project in VSCode. There is a launch.json inside ~.vscode~ folder.
+
+2) Execute:
+#+begin_src sh :eval no
+docker-compose up
+#+end_src
+
+3) Press debug inside VS Code and the code stops at breakpoint.
+
+4) However, M-x dap-debug for the same project for the same launch.json inside Emacs returns ~No message handler for debugpyWaitingForServer~.
